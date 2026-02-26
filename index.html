@@ -5,26 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALign EMEA Pro</title>
 
-    <!-- 📱 LOGO AIR LIQUIDE -->
-    <link rel="apple-touch-icon" sizes="192x192" href="[https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png)">
-    <link rel="icon" type="image/png" href="[https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png)">
+    <link rel="apple-touch-icon" sizes="192x192" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png">
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png">
 
-    <!-- Mode App native iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="ALign CRM">
 
-    <!-- 🔄 REDIRECTION VERS VOTRE SCRIPT PERSONNEL -->
-    <meta http-equiv="refresh" content="0; url=[https://script.google.com/macros/s/AKfycbymfsRav8s2N8BwA-_pPlbd-PQw-ZlqCB2sD9dkTsQgUFKhayhwFDmZ-Tf9eLbNyYY/exec](https://script.google.com/macros/s/AKfycbymfsRav8s2N8BwA-_pPlbd-PQw-ZlqCB2sD9dkTsQgUFKhayhwFDmZ-Tf9eLbNyYY/exec)" />
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbymfsRav8s2N8BwA-_pPlbd-PQw-ZlqCB2sD9dkTsQgUFKhayhwFDmZ-Tf9eLbNyYY/exec" />
 
     <style>
-        body { background-color: #e0e5ec; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: sans-serif; color: #002d72; }
+        body { 
+            background-color: #e0e5ec; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: sans-serif; 
+            color: #002d72; 
+        }
+        .loader {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <div style="text-align: center;">
+    <div class="loader">
         <h3>⏳ Ouverture d'ALign CRM...</h3>
         <p style="font-size: 0.8rem; opacity: 0.6;">Redirection vers votre environnement personnel</p>
     </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://script.google.com/macros/s/AKfycbymfsRav8s2N8BwA-_pPlbd-PQw-ZlqCB2sD9dkTsQgUFKhayhwFDmZ-Tf9eLbNyYY/exec";
+        }, 500); // Petit délai de 0.5s pour laisser le temps à l'écran de s'afficher
+    </script>
 </body>
 </html>
