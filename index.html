@@ -3,43 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALign EMEA Pro</title>
+    <title>ALign CRM Pro</title>
 
-    <link rel="apple-touch-icon" sizes="192x192" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png">
-    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Air_Liquide_logo.svg/512px-Air_Liquide_logo.svg.png">
-
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23002d72'/%3E%3Cpath d='M50%2C20 Q60%2C15 70%2C20 L75%2C30 Q85%2C35 80%2C45 L70%2C50 Q75%2C60 70%2C70 L60%2C75 Q50%2C80 40%2C75 L30%2C70 Q25%2C60 30%2C50 L20%2C45 Q15%2C35 25%2C30 L30%2C20 Q40%2C15 50%2C20 Z M50%2C35 Q60%2C30 70%2C35 A15%2C15 0 1%2C1 50%2C35' fill='%23ffffff' fill-rule='evenodd'/%3E%3Cpath d='M35%2C60 L45%2C50 L60%2C55 L70%2C35' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3Cpolygon points='70%2C30 75%2C35 65%2C40' fill='%23ffffff' stroke='none'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23002d72'/%3E%3Cpath d='M50%2C20 Q60%2C15 70%2C20 L75%2C30 Q85%2C35 80%2C45 L70%2C50 Q75%2C60 70%2C70 L60%2C75 Q50%2C80 40%2C75 L30%2C70 Q25%2C60 30%2C50 L20%2C45 Q15%2C35 25%2C30 L30%2C20 Q40%2C15 50%2C20 Z M50%2C35 Q60%2C30 70%2C35 A15%2C15 0 1%2C1 50%2C35' fill='%23ffffff' fill-rule='evenodd'/%3E%3Cpath d='M35%2C60 L45%2C50 L60%2C55 L70%2C35' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3Cpolygon points='70%2C30 75%2C35 65%2C40' fill='%23ffffff' stroke='none'/%3E%3C/svg%3E">
+    
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="ALign CRM">
-
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbymfsRav8s2N8BwA-_pPlbd-PQw-ZlqCB2sD9dkTsQgUFKhayhwFDmZ-Tf9eLbNyYY/exec" />
+    <meta name="mobile-web-app-capable" content="yes">
 
     <style>
         body { 
-            background-color: #e0e5ec; 
+            background-color: #f4f7f6; 
             display: flex; 
+            flex-direction: column;
             justify-content: center; 
             align-items: center; 
             height: 100vh; 
             margin: 0; 
-            font-family: sans-serif; 
-            color: #002d72; 
-        }
-        .loader {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            color: #2c3e50; 
             text-align: center;
+            padding: 20px;
+        }
+        .btn {
+            background-color: #002d72; /* Bleu Air Liquide */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #001f4d;
+        }
+        .instructions {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 40px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            max-width: 320px;
+            text-align: left;
+        }
+        h2 { margin-bottom: 5px; color: #002d72; }
+        p.subtitle { margin-top: 0; color: #7f8c8d; font-size: 1rem; }
+        
+        /* Style du SVG sur la page d'accueil */
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-radius: 24px;
         }
     </style>
 </head>
 <body>
-    <div class="loader">
-        <h3>⏳ Ouverture d'ALign CRM...</h3>
-        <p style="font-size: 0.8rem; opacity: 0.6;">Redirection vers votre environnement personnel</p>
+    <div id="content">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="app-icon">
+            <rect width="100" height="100" rx="20" fill="#002d72"/>
+            <path d="M50,20 Q60,15 70,20 L75,30 Q85,35 80,45 L70,50 Q75,60 70,70 L60,75 Q50,80 40,75 L30,70 Q25,60 30,50 L20,45 Q15,35 25,30 L30,20 Q40,15 50,20 Z M50,35 Q60,30 70,35 A15,15 0 1,1 50,35" fill="#ffffff" fill-rule="evenodd"/>
+            <path d="M35,60 L45,50 L60,55 L70,35" fill="none" stroke="#ffffff" stroke-width="3"/>
+            <polygon points="70,30 75,35 65,40" fill="#ffffff" stroke="none"/>
+        </svg>
+
+        <h2>ALign CRM Pro</h2>
+        <p class="subtitle">Votre environnement de gestion client</p>
+        
+        <a href="https://script.google.com/a/macros/airliquide.com/s/AKfycbx9mnM6vTBW4zLpz_jaI5zFfKBgPLB8SAmsvS5KK0WWudN3KSCH1H70IpjYf6npXA7d/exec" class="btn">Ouvrir l'application</a>
+
+        <div class="instructions">
+            <p style="text-align: center; margin-top: 0; color: #002d72;"><strong>📲 Installer l'application</strong></p>
+            <p><strong>iOS (Safari) :</strong> Touchez l'icône de partage (carré avec flèche) puis "Sur l'écran d'accueil".</p>
+            <p><strong>Android :</strong> Touchez les 3 points en haut à droite puis "Ajouter à l'écran d'accueil".</p>
+        </div>
     </div>
 
     <script>
-        setTimeout(function() {
-            window.location.href = "https://script.google.com/macros/s/AKfycbymfsRav8s2N8BwA-_pPlbd-PQw-ZlqCB2sD9dkTsQgUFKhayhwFDmZ-Tf9eLbNyYY/exec";
-        }, 500); // Petit délai de 0.5s pour laisser le temps à l'écran de s'afficher
+        const isStandalone = window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
+
+        if (isStandalone) {
+            document.getElementById('content').style.display = 'none';
+            document.body.innerHTML = '<h3 style="color:#002d72;">⏳ Ouverture de ALign CRM Pro...</h3>';
+            
+            window.location.href = "https://script.google.com/a/macros/airliquide.com/s/AKfycbx9mnM6vTBW4zLpz_jaI5zFfKBgPLB8SAmsvS5KK0WWudN3KSCH1H70IpjYf6npXA7d/exec";
+        }
     </script>
 </body>
 </html>
